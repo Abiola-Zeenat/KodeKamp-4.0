@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((data) => {
         countriesData = data;
-        displayCountries(data.slice(0, 8)); // Display only 8 countries initially
+        displayCountries(data);
       })
       .catch((error) => {
         console.error("Error fetching country data:", error);
@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     countries.forEach((country) => {
       const countryCard = document.createElement("div");
       countryCard.classList.add("country");
-
       const countryFlag = document.createElement("img");
       countryFlag.src = country.flags.png;
       countryFlag.alt = `Flag of ${country.name.common}`;
@@ -106,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     }
 
-    displayCountries(filteredCountries.slice(0, 8)); // Display only 8 filtered countries
+    displayCountries(filteredCountries);
   };
 
   // Fetch countries when the page loads

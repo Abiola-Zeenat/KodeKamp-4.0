@@ -188,12 +188,18 @@ a {
   }
 }
 @media (max-width: 480px) {
+  input {
+    padding: 1rem 4rem;
+  }
   .top-bar,
   .country-container {
     padding: 1rem 2rem;
   }
   .search-bar {
     padding: 2rem;
+  }
+  .search {
+    width: 80vw;
   }
   .country {
     width: 70vw;
