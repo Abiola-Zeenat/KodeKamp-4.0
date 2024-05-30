@@ -158,14 +158,7 @@ a {
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 3rem;
-  /* justify-content: space-between; */
-  /* align-items: center; */
 }
-
-/* .border ul {
-  display: flex;
-  gap: 20px;
-} */
 
 .border-btn {
   background-color: var(--color-bg2);
