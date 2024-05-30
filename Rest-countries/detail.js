@@ -25,6 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
     currentThemeSetting = newTheme;
   });
 });
+
+//update back button
+document.addEventListener("DOMContentLoaded", () => {
+  const backButton = document.getElementsByClassName("back");
+  backButton.addEventListener("click", () => {
+    window.history.back();
+  });
+
+  // if (backButton) {
+  //   backButton.addEventListener("click", () => {
+  //     window.history.back();
+  //   });
+  // } else {
+  //   console.error("Back button not found.");
+  // }
+});
+
 //Detailed page fetch
 document.addEventListener("DOMContentLoaded", () => {
   const countryDetailsContainer = document.getElementById("country-detail");
