@@ -28,18 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //update back button
 document.addEventListener("DOMContentLoaded", () => {
-  const backButton = document.getElementsByClassName("back");
+  const backButton = document.getElementById("back");
   backButton.addEventListener("click", () => {
     window.history.back();
   });
-
-  // if (backButton) {
-  //   backButton.addEventListener("click", () => {
-  //     window.history.back();
-  //   });
-  // } else {
-  //   console.error("Back button not found.");
-  // }
 });
 
 //Detailed page fetch
