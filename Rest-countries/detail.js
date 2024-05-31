@@ -45,7 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const encodedCountryName = encodeURIComponent(countryName);
     const apiUrl = `https://restcountries.com/v3.1/name/${encodedCountryName}`;
 
-    console.log(`Fetching data from URL: ${apiUrl}`);
+    // Display loading animation
+    countryDetailsContainer.innerHTML =
+      '<div class="loading"><div class="loader"></div></div>';
 
     fetch(apiUrl)
       .then((response) => {

@@ -35,6 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let countriesData = [];
 
   const fetchCountries = () => {
+    // Display loading animation
+    countryContainer.innerHTML =
+      '<div class="loading"><div class="loader"></div></div>';
+
     fetch("https://restcountries.com/v3.1/all")
       .then((response) => response.json())
       .then((data) => {
