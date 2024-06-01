@@ -2,7 +2,6 @@
   padding: 0;
   text-align: center;
   color: #413041;
-  background-color: antiquewhite;
 }
 h1 {
   font-size: 4rem;
@@ -12,7 +11,8 @@ h2 {
   margin: 2rem;
 }
 .timer-card {
-  margin: auto;
+  background-color: antiquewhite;
+  margin: 20% auto;
   width: 60%;
   height: 50%;
   border-radius: 20px;
@@ -56,5 +56,8 @@ button:disabled {
   .timer-card {
     width: 80%;
     height: auto;
+  }
+  button {
+    margin-bottom: 10px;
   }
 }
