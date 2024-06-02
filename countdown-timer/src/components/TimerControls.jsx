@@ -1,4 +1,5 @@
 export default function TimerControls({
+  timer,
   isRunning,
   timeLeft,
   onStartTimer,
@@ -7,7 +8,10 @@ export default function TimerControls({
 }) {
   return (
     <div>
-      <button onClick={onStartTimer} disabled={isRunning && timeLeft > 0}>
+      <button
+        onClick={onStartTimer}
+        disabled={(isRunning && timeLeft > 0) || !timer}
+      >
         Start
       </button>
       <button onClick={onPauseTimer} disabled={!isRunning}>

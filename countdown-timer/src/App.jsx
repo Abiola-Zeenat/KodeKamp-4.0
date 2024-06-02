@@ -65,6 +65,7 @@ function App() {
       />
 
       <TimerControls
+        timer={timer}
         isRunning={isRunning}
         timeLeft={timeLeft}
         onStartTimer={handleStartTimer}
