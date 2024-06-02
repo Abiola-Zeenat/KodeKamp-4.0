@@ -1,4 +1,4 @@
-export default function TimerDisplay({ timeLeft }) {
+export default function TimerDisplay({ timeLeft, timer }) {
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
@@ -9,8 +9,8 @@ export default function TimerDisplay({ timeLeft }) {
 
   return (
     <div>
-      {timeLeft > 0 ? (
-        <h2 className="timer">Time Left: {formatTime(timeLeft)}</h2>
+      {timer > 0 ? (
+        <h2 className="timer">{formatTime(timeLeft)}</h2>
       ) : (
         <h2>Enter a time and start the countdown</h2>
       )}

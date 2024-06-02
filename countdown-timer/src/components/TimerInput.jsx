@@ -1,5 +1,6 @@
 export default function TimerInput({
-  inputMinutes,
+  onSetTimer,
+  inputSeconds,
   handleInputChange,
   inputKey,
 }) {
@@ -8,10 +9,11 @@ export default function TimerInput({
       <input
         key={inputKey}
         type="number"
-        value={inputMinutes}
+        value={inputSeconds}
         onChange={handleInputChange}
-        placeholder="Enter time in minutes"
+        placeholder="Enter time in seconds"
       />
+      <button onClick={onSetTimer}>Set Timer</button>
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import TimerControls from "./components/TimerControls";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import TimerInput from "./components/TimerInput";
 import TimerDisplay from "./components/TimerDisplay";
 import "./App.css";
 
 function App() {
-  const [inputMinutes, setInputMinutes] = useState("");
+  const [timer, setTimer] = useState(false);
+  const [inputSeconds, setInputSeconds] = useState("");
   const [timeLeft, setTimeLeft] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [inputKey, setInputKey] = useState(0);
@@ -24,15 +25,18 @@ function App() {
   }, [isRunning, timeLeft]);
 
   const handleInputChange = (e) => {
-    setInputMinutes(e.target.value);
+    setInputSeconds(e.target.value);
   };
-
+  const handleSetTimer = () => {
+    setTimeLeft(inputSeconds);
+    setTimer(true);
+  };
   const handleStartTimer = () => {
     if (!isRunning) {
-      if (timeLeft === 0 && inputMinutes) {
-        const timeInSeconds = parseInt(inputMinutes, 10) * 60;
-        if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
-          setTimeLeft(timeInSeconds);
+      if (timeLeft === 0 && inputSeconds) {
+        // const timeInSeconds = parseInt(inputSeconds, 10) * 60;
+        if (!isNaN(inputSeconds) && inputSeconds > 0) {
+          setTimeLeft(inputSeconds);
         }
       }
       setIsRunning(true);
@@ -44,15 +48,20 @@ function App() {
   const handleResetTimer = () => {
     setIsRunning(false);
     setTimeLeft(0);
-    setInputMinutes("");
+    setInputSeconds("");
+    setTimer(false);
     setInputKey((prevKey) => prevKey + 1);
   };
 
   return (
     <div className="timer-card">
       <h1>Countdown Timer</h1>
-      <TimerDisplay timeLeft={timeLeft} />
-      <TimerInput handleInputChange={handleInputChange} inputKey={inputKey} />
+      <TimerDisplay timeLeft={timeLeft} timer={timer} />
+      <TimerInput
+        onSetTimer={handleSetTimer}
+        handleInputChange={handleInputChange}
+        inputKey={inputKey}
+      />
 
       <TimerControls
         isRunning={isRunning}
