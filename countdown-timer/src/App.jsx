@@ -58,6 +58,7 @@ function App() {
       <h1>Countdown Timer</h1>
       <TimerDisplay timeLeft={timeLeft} timer={timer} />
       <TimerInput
+        timer={timer}
         onSetTimer={handleSetTimer}
         handleInputChange={handleInputChange}
         inputKey={inputKey}

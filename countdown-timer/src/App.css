@@ -24,7 +24,7 @@ input {
   border: none;
   border-radius: 10px;
   font-size: 1rem;
-  margin: 1.2rem 0;
+  margin: 1.2rem 0.5rem;
   background-color: #cfb3cfc5;
 }
 ::placeholder {
@@ -44,7 +44,11 @@ button {
 button:disabled {
   background-color: #cfb3cf;
 }
-
+@media (max-width: 768px) {
+  input {
+    padding: 1rem 2rem;
+  }
+}
 @media (max-width: 480px) {
   h1,
   .timer {

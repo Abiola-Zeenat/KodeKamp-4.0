@@ -1,4 +1,5 @@
 export default function TimerInput({
+  timer,
   onSetTimer,
   inputSeconds,
   handleInputChange,
@@ -13,7 +14,9 @@ export default function TimerInput({
         onChange={handleInputChange}
         placeholder="Enter time in seconds"
       />
-      <button onClick={onSetTimer}>Set Timer</button>
+      <button onClick={onSetTimer} disabled={timer}>
+        Set Timer
+      </button>
     </div>
   );
 }
