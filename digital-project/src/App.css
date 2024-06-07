@@ -283,7 +283,9 @@ textarea {
     padding: 1rem 4rem;
     gap: 20px;
   }
-
+  .footer {
+    padding: 2rem 4rem;
+  }
   .hero {
     align-items: center;
     flex-wrap: wrap;
@@ -293,15 +295,20 @@ textarea {
   }
 
   .gallery {
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
   }
   .gallery img {
-    width: 200%;
+    width: 180%;
     height: 300px;
   }
   .photo-gallery {
-    padding: 0 4rem;
+    padding: 0 3rem;
     width: 80%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .gallery-nums {
+    padding: 0 3rem;
   }
   .mob-flex,
   .about-image,
@@ -311,7 +318,8 @@ textarea {
     align-items: center;
   }
   .sample-container {
-    margin: 0 2rem;
+    margin: 0 1rem;
+    padding-right: 0;
     margin-bottom: 3rem;
   }
   .project-container img,
@@ -322,6 +330,10 @@ textarea {
   .all-project {
     margin-left: 30%;
   }
+  .sample-down img {
+    width: 200%;
+    margin-bottom: 20px;
+  }
 
   input,
   textarea {
@@ -330,6 +342,12 @@ textarea {
   .required span {
     margin-left: 0 !important;
     display: none;
+  }
+  .sample-text {
+    padding: 1rem 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    width: 50%;
   }
 }
 @media (max-width: 512px) {
@@ -348,6 +366,12 @@ textarea {
   input,
   textarea {
     width: 300px;
+  }
+  .nav {
+    padding: 1rem 2rem;
+  }
+  .footer {
+    padding: 2rem;
   }
   .about-image {
     align-items: center;
