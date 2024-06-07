@@ -167,7 +167,7 @@ li:first-of-type {
   width: 47.5%;
   height: 255px;
 }
-.sample-down {
+.sample-down img {
   gap: 5%;
   height: 240px;
 }
@@ -183,7 +183,6 @@ li:first-of-type {
   background-color: #333333;
   border: none;
   color: #ffffff83;
-  align-self: flex-end;
   margin-top: 2rem;
   padding: 1rem 2rem;
   margin-left: 84%;
@@ -278,7 +277,7 @@ textarea {
   .flex {
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
   .nav {
     padding: 1rem 4rem;
@@ -329,6 +328,45 @@ textarea {
     max-width: 80vw;
   }
   .required span {
-    margin-left: -5px !important;
+    margin-left: 0 !important;
+    display: none;
+  }
+}
+@media (max-width: 512px) {
+  .hero,
+  .about-container,
+  .mission-container,
+  .project-container,
+  .contact-container {
+    padding: 0 2rem;
+  }
+
+  .required span {
+    margin-left: 0 !important;
+    display: none;
+  }
+  input,
+  textarea {
+    width: 300px;
+  }
+  .about-image {
+    align-items: center;
+  }
+
+  .sample {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .sample-down {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .project-container img {
+    width: 80%;
+  }
+  .sample-top,
+  .about-image {
+    display: block;
   }
 }
