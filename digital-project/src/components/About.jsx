@@ -5,9 +5,9 @@ import Button from "./Button";
 
 export default function About() {
   return (
-    <div className="about-container">
-      <div className="about-image">
-        <div className="split-image">
+    <div className="about-container flex">
+      <div className="about-image flex">
+        <div className="split-image flex">
           <img src={aboutTop} alt="Logo" />
           <img src={aboutlow} alt="Logo" />
         </div>

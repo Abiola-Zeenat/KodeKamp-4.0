@@ -34,7 +34,7 @@ const ГАЛЕРЕЯ = () => {
         ))}
       </div>
 
-      <div className="flex">
+      <div className="flex mob-flex">
         <div className="hero-nums gallery-nums">
           <div className="zero">
             <p>0</p>
