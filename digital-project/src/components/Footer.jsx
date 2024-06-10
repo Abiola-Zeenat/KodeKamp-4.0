@@ -14,10 +14,11 @@ const Footer = () => {
         <p>Certifications</p>
         <p>Contacts</p>
       </div>
-      <div>
+      <div className="footer-contacts">
         <h5>Contacts</h5>
         <p>
           <i class="fa fa-map-marker" aria-hidden="true"></i>1234 Sample Street
+          <br />
           Austin Texas 78704
         </p>
         <p>

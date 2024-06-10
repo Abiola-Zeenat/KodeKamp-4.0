@@ -5,7 +5,7 @@ import Button from "./Button";
 
 export default function About() {
   return (
-    <div className="about-container flex">
+    <div className="about-container wrap flex">
       <div className="about-image flex">
         <div className="split-image flex">
           <img src={aboutTop} alt="Logo" />

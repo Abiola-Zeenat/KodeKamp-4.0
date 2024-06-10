@@ -6,9 +6,9 @@ import project4 from "../assets/project4.png";
 
 const Projects = () => {
   return (
-    <div className="project-container">
+    <div className="project-container wrap">
       <h1 className="light-weight">Our Projects</h1>
-      <div>
+      <div className="img-wrap">
         <div className="flex sample-top">
           <div className="sample">
             <div className="overlay">

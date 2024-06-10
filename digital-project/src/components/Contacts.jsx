@@ -3,15 +3,15 @@ import contact from "../assets/contact.png";
 
 const Contacts = () => {
   return (
-    <div className="contact-container">
+    <div className="contact-container  wrap">
       <h1 className="light-weight">Contact Us</h1>
-      <div className="flex contact-form">
+      <div className=" flex contact-form">
         <form method="post" className="flex-column">
           <div>
             <input type="text" placeholder="Name" />
           </div>
           <div className="required">
-            <input type="text" placeholder="Phone Number" required />
+            <input type="text" placeholder="Phone Number " required />
             <span
               style={{
                 color: "red",
@@ -60,7 +60,9 @@ const Contacts = () => {
           </div>
           <Button text="SEND EMAIL" className="all-project contact" />
         </form>
-        <img src={contact} alt="a man calling" />
+        <div>
+          <img src={contact} alt="a man calling" />
+        </div>
       </div>
     </div>
   );

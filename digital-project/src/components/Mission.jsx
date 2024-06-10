@@ -1,6 +1,6 @@
 const Mission = () => {
   return (
-    <div className="mission-container">
+    <div className="mission-container wrap">
       <h1 className="light-weight">Main Focus/Mission Statement</h1>
       <div className="mission flex">
         <div className="flex">
