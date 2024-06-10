@@ -267,6 +267,16 @@ textarea {
 }
 
 /* Mobile view */
+@media (max-width: 1024px) {
+  .sample-container {
+    flex-direction: column;
+  }
+  .footer {
+    flex-direction: row;
+    padding: 2rem 4rem;
+    flex-wrap: wrap;
+  }
+}
 
 @media (max-width: 768px) {
   body {
