@@ -202,10 +202,7 @@ textarea {
   align-items: flex-start;
   gap: 1.5rem;
 }
-.contact-form img {
-  /* max-width: 80%;
-  height: auto; */
-}
+
 /* Footer */
 .footer {
   padding: 2rem 7.5rem;
