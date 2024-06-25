@@ -1,10 +1,13 @@
 import { useState } from "react";
+import close from "../assets/Iconclose.png";
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 
 const PersonalInfo = () => {
   const [fullName, setFullName] = useState("");
   const [gender, setGender] = useState("");
   const [phone, setPhone] = useState("");
-  const [birthday, setBirthday] = useState("");
+  const [birthday, setBirthday] = useState(null);
 
   const handleFullNameChange = (e) => setFullName(e.target.value);
   const handleGenderChange = (e) => setGender(e.target.value);
@@ -19,29 +22,30 @@ const PersonalInfo = () => {
 
   return (
     <div className="container auth-container mt-5">
-      <div className="d-flex justify-content-between align-items-center mb-3">
-        <h5>Personal information</h5>
-        <p className="text-success2">2 of 3</p>
+      <div className="info d-flex justify-content-between align-items-center mb-4">
+        <div className="d-flex align-items-center gap-4 fw-bold">
+          <h5 className="text-dark">Personal information</h5>
+          <p className="text-success2 pt-2">2 of 3</p>
+        </div>
         <button className="btn btn-link text-dark close-btn">
-          <i className="fa fa-times"></i>
+          <img src={close} alt="close" />
         </button>
       </div>
 
       <form onSubmit={handleSubmit}>
-        <div className="input-container">
+        <div className="mb-4">
           <input
             type="text"
-            className="form-control"
+            className="form-control p-3"
             id="fullName"
-            placeholder=" " // Empty placeholder
+            placeholder="Full name"
             value={fullName}
             onChange={handleFullNameChange}
             required
           />
-          <label htmlFor="fullName">Full name</label>
         </div>
-        <div className="gender-container">
-          <label>Gender:</label>
+        <div className="d-flex align-items-center mb-4">
+          <label className="me-2">Gender: </label>
           <div className="form-check form-check-inline">
             <input
               className="form-check-input"
@@ -71,18 +75,20 @@ const PersonalInfo = () => {
             </label>
           </div>
         </div>
-        <div className="mb-3">
+        <div className="mb-3 fw-bold f-13">
           <i className="fa fa-info-circle info-icon"></i>
           <span>The phone number and birthday are only visible to you</span>
         </div>
-        <div className="input-container phone-group">
-          <select className="form-control">
+        <div className="mb-4 phone-group">
+          <select className="form-control p-3">
+            <option value="+1">+1</option>
+            <option value="+44">+44</option>
             <option value="+598">+598</option>
-            {/* Add more country codes as needed */}
+            <option value="+598">+234</option>
           </select>
           <input
             type="text"
-            className="form-control"
+            className="form-control p-3"
             id="phone"
             placeholder="Phone number"
             value={phone}
@@ -90,19 +96,18 @@ const PersonalInfo = () => {
             required
           />
         </div>
-        <div className="input-container">
+        <div className=" input-group">
           <input
             type="date"
-            className="form-control"
+            className="form-control p-3"
             id="birthday"
-            placeholder=" " // Empty placeholder
+            placeholder="Birthday"
             value={birthday}
             onChange={handleBirthdayChange}
           />
-          <label htmlFor="birthday">Birthday</label>
           <span className="optional-label">Optional</span>
         </div>
-        <div className="mb-3 text-muted">
+        <div className="mb-5 text-muted f-13">
           Let us know about your birthday so as not to miss a gift
         </div>
         <button type="submit" className="btn btn-primary w-100 custom-btn">

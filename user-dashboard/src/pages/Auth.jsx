@@ -2,6 +2,7 @@ import { useState } from "react";
 import apple from "../assets/Apple.png";
 import facebook from "../assets/Facebook.png";
 import google from "../assets/Google.png";
+import close from "../assets/Iconclose.png";
 
 const Auth = () => {
   const [isRegister, setIsRegister] = useState(true);
@@ -47,7 +48,8 @@ const Auth = () => {
         setPasswordError("Password must be at least 8 characters long.");
       }
       if (!email && !password) {
-        alert("please fill out the email and password!");
+        setEmailError("Please enter a valid email address.");
+        setPasswordError("Password must be at least 8 characters long.");
       }
     }
   };
@@ -76,7 +78,7 @@ const Auth = () => {
           </li>
         </ul>
         <button className="btn btn-link text-dark close-btn">
-          <i className="fa fa-times"></i>
+          <img src={close} alt="close" />
         </button>
       </div>
       <div>
@@ -85,7 +87,7 @@ const Auth = () => {
           <img src={facebook} alt="facebook-logo" />
           <img src={google} alt="google-logo" />
         </div>
-        <p className="fw-bold">
+        <p className="fw-bold f-13">
           or {isRegister ? "register" : "login"} with email
         </p>
       </div>
@@ -143,7 +145,7 @@ const Auth = () => {
           )}
         </div>
         {isRegister && (
-          <label className="fw-bold mt-0 mb-4">8+ characters</label>
+          <label className="fw-bold f-13 mt-0 mb-4">8+ characters</label>
         )}
         <button
           type="submit"
